@@ -51,5 +51,9 @@ class ApplicationController < Sinatra::Base
     #binding.pry
     Post.delete(params["id"])
     erb :delete
+    binding.pry
+    @post = Post.find(params["id"])
+
+    erb :show
   end
 end
